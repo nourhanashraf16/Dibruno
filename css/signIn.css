@@ -1,0 +1,437 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+:root{
+    --section-color : #831532;
+    --backgroundColor-section :#f3f5fa;
+    --backgroundColor-hover : #eaeaea;
+    --border-color:#ccc
+}
+body{
+
+}
+/* start-nav */
+nav{
+    width: 100%;
+    height:80px;
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+}
+nav .container-fluid{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .navbar-brand img{
+    width:250px;
+}
+nav form{
+    position: relative;
+}
+nav form input[type=text]{
+    border: 1px solid #bdbdbd;
+    padding: 2px 12px;
+}
+
+nav form input[type=text]:focus{
+    outline: none;
+    border: 1px solid #bdbdbd;
+}
+nav form span{
+    padding: 0 10px;
+}
+nav form .icon{
+    position: absolute;
+    right: 0;
+    top: 4px;
+}
+nav .links ul{
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+nav .links ul li{
+    padding: 9px;
+    margin-left: 8px;
+    font-size: 18px;
+}
+nav .links ul li a{
+    text-decoration: none;
+    color: black;
+    transition: all .2s linear;
+    font-weight: 600;
+}
+nav .links ul li a:hover{
+    color: var(--section-color);
+}
+nav .links ul li .active{
+    color: #831532;
+}
+/* second nav*/
+.second-nav{
+    height: 70px;
+    position:fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    z-index: 99;
+    background-color: white !important;
+}
+.second-nav .container-fluid .links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    font-size: 20px;
+}
+.second-nav .container-fluid .links .nav-item{
+    padding: 18px 14px;
+    transition: all .2s linear;
+}
+.second-nav .container-fluid .links .nav-item .nav-link{
+    text-decoration: none;
+    color: black;
+    transition: all .2s linear;
+    font-weight: 600;
+}
+.second-nav .container-fluid .links .nav-item:hover{
+    background-color: var(--backgroundColor-hover);
+} 
+.second-nav .container-fluid .links .nav-item .nav-link:hover,
+.second-nav .container-fluid .links .nav-item .active
+{
+    color: var(--section-color);
+}
+.second-nav .links .nav-item:hover .dropdown-menu{
+    display: block;
+}
+.second-nav .dropdown-toggle:after{
+    display: none;
+}
+.second-nav .dropdown-menu{
+    background-color: var(--backgroundColor-hover);
+    border-radius: 0;
+    margin-top: 0;
+}
+.second-nav .dropdown-menu .dropdown-item{
+    padding: 5px 10px;
+    font-size: 17px;
+    font-weight: 600;
+}
+.second-nav .dropdown-menu .dropdown-item:hover{
+    background-color: white;
+    border-radius: 0;
+    color: var(--section-color);
+}
+
+/* third navbar */
+.third-nav{
+    position: fixed !important;
+    height: 70px;    
+    z-index: 888;
+    display: flex;
+    align-items: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: white !important;
+}
+.third-nav img{
+    width:140px;
+}
+.third-nav .navbar-toggler{
+    position: relative;
+}
+.third-nav a i {
+    color: black;
+    padding: 8px 3px;
+    font-size: 16px;
+}
+.third-nav .navbar-toggler i{
+    color: black !important;
+    font-size: 16px;
+}
+.collapse{
+    position: absolute;
+    z-index: 888;
+    left: 12px;
+    width: 350px;
+}
+.collapse .parent{
+    list-style: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 0;
+    background-color: var(--backgroundColor-hover);
+}
+.collapse .parent .nav-item {
+    padding: 5px 13px;
+}
+.collapse .parent .nav-item:hover{
+    background-color: white;
+    color: var(--section-color);
+}
+.collapse .dropdown-toggle{
+    position: relative;
+}
+.collapse .dropdown-toggle::after{
+    position: absolute;
+    top: 16px;
+    left: 300px;
+}
+.collapse .dropdown-menu{
+    border-radius: 0;
+    background-color:white;
+}
+.collapse .dropdown-menu li{
+    border-radius: 0;
+    font-size: 17px;
+    font-weight: 800;
+}
+.collapse .dropdown-menu li a:hover{
+    background-color: var(--backgroundColor-hover);
+}
+.collapse .dropdown-menu li .active{
+    color: #831532;
+}
+@media (max-width:992px){ 
+    .first-nav{
+        display: none;
+    }
+    .second-nav{
+        display: none;
+    }
+}
+@media (min-width:992px){
+    .third-nav{
+        display: none;
+    }
+}
+/* start validation section */
+.validation{
+    margin-top: 70px;
+}
+
+.validation .container-fluid .home p{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.validation .container-fluid .home p .login{
+    color: #831532;
+}
+
+.validation .container-fluid .title h1{
+    font-weight: bold;
+}
+.validation .createAccount h4
+,.validation .signIn h4{
+    letter-spacing: 0;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.validation .createAccount p{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.validation .createAccount .btn{
+    border-radius: 0;
+    border: 2px solid #a85425;
+    color: #a85425;
+    font-size: 19px;
+    font-weight: 600;
+    box-shadow: none;
+}
+.validation .createAccount .btn:hover{
+    color: white;
+    background-color: #a85425;
+}
+.validation .signIn form {
+    position: relative;
+}
+.validation .signIn input ,
+.validation .signIn label{
+    display: block;
+}
+.validation .signIn input{
+    width: 55%;
+    padding: 5px 15px;
+    border: 1px solid #bdbdbd;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+.validation .signIn input:focus{
+    outline: none;
+}
+.validation .signIn label{
+    font-weight: 600;
+}
+.validation .signIn input[type=submit]{
+    border: 2px solid #a85425;
+    color: #a85425;
+    font-size: 19px;
+    font-weight: 600;
+    background-color: transparent;
+    padding: 5px 15px;
+    width: 220px;
+    letter-spacing: 2px;
+}
+.validation .signIn input[type=submit]:hover{
+    color: white;
+    background-color: #a85425;
+}
+.validation .signIn .error{
+    font-size: 20px;
+    font-weight: 600;
+    color:red;
+}
+.validation .signIn .forgetPass{
+    position: absolute;
+    bottom: 42px;
+    left: 255px;
+    font-size: 15px;
+    font-weight: 600;
+
+}
+.validation .map-area iframe{
+    width: 100%;
+    height: 400px;
+    box-shadow: 0 2px 8px rgba(50,50, 50, .6);
+    padding: 20px;
+}
+/* end validation section */
+
+footer{
+    background-color:#000 !important;
+}
+footer h5{
+    letter-spacing: -1px;
+    font-size: 17px;
+}
+footer .logo{
+    width: 100px;
+}
+footer .dropup{
+    display: none;
+    margin:25px 0;
+}
+footer .dropup .btn{
+    margin-bottom: 0;
+    border: 2px solid gray;
+    font-weight:700;
+    width: 170px;
+}
+footer .dropup .dropdown-menu{
+    background-color: gray;
+    border-radius: 0;
+    font-size: 22px;
+}
+footer .dropup .dropdown-menu .dropdown-item{
+    color: white;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+}
+footer .dropup .dropdown-menu .dropdown-item:hover{
+    background-color: gray;
+    color: #000;
+}
+footer a{
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+}
+footer ul{
+    padding: 0 15px;
+}
+footer .row ul li a:hover{
+    color:gray;
+}
+footer p{
+    font-size: 13px;
+    margin: 8px 0;
+}
+footer span{
+    color: #a85425;
+    letter-spacing: -1px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+footer .box{
+    border-right: 1px solid gray;
+
+}
+footer input[type=email]{
+    background-color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-bottom: 8px;
+    width: 80%;
+}
+footer input[type=email]:focus{
+    outline: none;
+}
+footer button{
+    background-color: #000;
+    border: 2px solid white;
+    padding: 5px 10px;
+    width: 80%;
+    font-size: 18px;
+    color: white;
+}
+footer .social {
+    display: flex;
+    align-items: center;
+}
+footer .social li a{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    border-radius: 5px;
+    background-color: gray;
+}
+@media  (max-width: 992px) { 
+        footer .second-box ,  footer .third-box{
+                display: none;
+        }
+        footer .dropup{
+            display: block;
+        }
+    }
+    @media (max-width: 768px) { 
+        footer{
+            text-align: center;
+        }
+        footer .forth-box h5{
+             margin-top: 25px;
+        }
+        footer .forth-box form input,
+        footer .forth-box form button{
+            width: 50%;
+        }
+        footer .last-box h5{
+            margin-top: 25px;
+        }
+        footer .last-box .social{
+            width: 200px;
+            margin: auto;
+        }
+    }
+/* end footer */
