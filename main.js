@@ -150,6 +150,9 @@ function renderCartItemsArray() {
       onclick="updateCartItems('decrese',${cartItem.id})"
       >-</span
     >
+
+
+    
   </td>
     <td>${cartItem.price}.00$</td>
     <td>${cartItem.price * cartItem.amount}.00$</td>
