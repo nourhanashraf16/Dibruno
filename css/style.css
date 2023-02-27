@@ -249,6 +249,9 @@ nav .links ul li a:hover {
   overflow-y: auto;
   overflow-x: hidden;
 }
+.sideSec::-webkit-scrollbar{
+  display: none !important;
+}
 .sideSec.open {
   right: 0;
 }
@@ -262,7 +265,6 @@ nav .links ul li a:hover {
 }
 .sideSec .parentTable {
   margin-top: 35px;
-  overflow-y: scroll;
 }
 .sideSec .table {
   background-color: white;
